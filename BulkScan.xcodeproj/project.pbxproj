@@ -43,24 +43,24 @@
 		423803221574340C00A4BC5C /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		423803241574340C00A4BC5C /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
 		423803261574340C00A4BC5C /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
-		4238032A1574340C00A4BC5C /* BulkScan-Info.plist */ = {isa = PBXFileReference; path = "BulkScan-Info.plist"; sourceTree = "<group>"; };
+		4238032A1574340C00A4BC5C /* BulkScan-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "BulkScan-Info.plist"; sourceTree = "<group>"; };
 		4238032C1574340C00A4BC5C /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		4238032E1574340C00A4BC5C /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		423803301574340C00A4BC5C /* BulkScan-Prefix.pch */ = {isa = PBXFileReference; path = "BulkScan-Prefix.pch"; sourceTree = "<group>"; };
-		423803311574340C00A4BC5C /* BSAppDelegate.h */ = {isa = PBXFileReference; path = BSAppDelegate.h; sourceTree = "<group>"; };
+		423803301574340C00A4BC5C /* BulkScan-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "BulkScan-Prefix.pch"; sourceTree = "<group>"; };
+		423803311574340C00A4BC5C /* BSAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BSAppDelegate.h; sourceTree = "<group>"; };
 		423803321574340C00A4BC5C /* BSAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BSAppDelegate.m; sourceTree = "<group>"; };
 		423803351574340C00A4BC5C /* BulkScan.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = BulkScan.xcdatamodel; sourceTree = "<group>"; };
-		423803371574340C00A4BC5C /* BSMasterViewController.h */ = {isa = PBXFileReference; path = BSMasterViewController.h; sourceTree = "<group>"; };
+		423803371574340C00A4BC5C /* BSMasterViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BSMasterViewController.h; sourceTree = "<group>"; };
 		423803381574340C00A4BC5C /* BSMasterViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BSMasterViewController.m; sourceTree = "<group>"; };
-		4238033A1574340C00A4BC5C /* BSDetailViewController.h */ = {isa = PBXFileReference; path = BSDetailViewController.h; sourceTree = "<group>"; };
+		4238033A1574340C00A4BC5C /* BSDetailViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BSDetailViewController.h; sourceTree = "<group>"; };
 		4238033B1574340C00A4BC5C /* BSDetailViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BSDetailViewController.m; sourceTree = "<group>"; };
 		4238033E1574340C00A4BC5C /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/BSMasterViewController.xib; sourceTree = "<group>"; };
 		423803411574340C00A4BC5C /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/BSDetailViewController.xib; sourceTree = "<group>"; };
 		423803481574340C00A4BC5C /* BulkScanTests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BulkScanTests.octest; sourceTree = BUILT_PRODUCTS_DIR; };
 		423803491574340C00A4BC5C /* SenTestingKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SenTestingKit.framework; path = Library/Frameworks/SenTestingKit.framework; sourceTree = DEVELOPER_DIR; };
-		423803521574340C00A4BC5C /* BulkScanTests-Info.plist */ = {isa = PBXFileReference; path = "BulkScanTests-Info.plist"; sourceTree = "<group>"; };
+		423803521574340C00A4BC5C /* BulkScanTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "BulkScanTests-Info.plist"; sourceTree = "<group>"; };
 		423803541574340C00A4BC5C /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
-		423803561574340C00A4BC5C /* BulkScanTests.h */ = {isa = PBXFileReference; path = BulkScanTests.h; sourceTree = "<group>"; };
+		423803561574340C00A4BC5C /* BulkScanTests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BulkScanTests.h; sourceTree = "<group>"; };
 		423803571574340C00A4BC5C /* BulkScanTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BulkScanTests.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
