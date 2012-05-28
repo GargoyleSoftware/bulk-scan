@@ -1,0 +1,487 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		423803211574340C00A4BC5C /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 423803201574340C00A4BC5C /* UIKit.framework */; };
+		423803231574340C00A4BC5C /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 423803221574340C00A4BC5C /* Foundation.framework */; };
+		423803251574340C00A4BC5C /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 423803241574340C00A4BC5C /* CoreGraphics.framework */; };
+		423803271574340C00A4BC5C /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 423803261574340C00A4BC5C /* CoreData.framework */; };
+		4238032D1574340C00A4BC5C /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 4238032B1574340C00A4BC5C /* InfoPlist.strings */; };
+		4238032F1574340C00A4BC5C /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 4238032E1574340C00A4BC5C /* main.m */; };
+		423803331574340C00A4BC5C /* BSAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 423803321574340C00A4BC5C /* BSAppDelegate.m */; };
+		423803361574340C00A4BC5C /* BulkScan.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 423803341574340C00A4BC5C /* BulkScan.xcdatamodeld */; };
+		423803391574340C00A4BC5C /* BSMasterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 423803381574340C00A4BC5C /* BSMasterViewController.m */; };
+		4238033C1574340C00A4BC5C /* BSDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4238033B1574340C00A4BC5C /* BSDetailViewController.m */; };
+		4238033F1574340C00A4BC5C /* BSMasterViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4238033D1574340C00A4BC5C /* BSMasterViewController.xib */; };
+		423803421574340C00A4BC5C /* BSDetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 423803401574340C00A4BC5C /* BSDetailViewController.xib */; };
+		4238034A1574340C00A4BC5C /* SenTestingKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 423803491574340C00A4BC5C /* SenTestingKit.framework */; };
+		4238034B1574340C00A4BC5C /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 423803201574340C00A4BC5C /* UIKit.framework */; };
+		4238034C1574340C00A4BC5C /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 423803221574340C00A4BC5C /* Foundation.framework */; };
+		4238034D1574340C00A4BC5C /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 423803261574340C00A4BC5C /* CoreData.framework */; };
+		423803551574340C00A4BC5C /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 423803531574340C00A4BC5C /* InfoPlist.strings */; };
+		423803581574340C00A4BC5C /* BulkScanTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 423803571574340C00A4BC5C /* BulkScanTests.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		4238034E1574340C00A4BC5C /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 423803131574340C00A4BC5C /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 4238031B1574340C00A4BC5C;
+			remoteInfo = BulkScan;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		4238031C1574340C00A4BC5C /* BulkScan.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BulkScan.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		423803201574340C00A4BC5C /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		423803221574340C00A4BC5C /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		423803241574340C00A4BC5C /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		423803261574340C00A4BC5C /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
+		4238032A1574340C00A4BC5C /* BulkScan-Info.plist */ = {isa = PBXFileReference; path = "BulkScan-Info.plist"; sourceTree = "<group>"; };
+		4238032C1574340C00A4BC5C /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		4238032E1574340C00A4BC5C /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		423803301574340C00A4BC5C /* BulkScan-Prefix.pch */ = {isa = PBXFileReference; path = "BulkScan-Prefix.pch"; sourceTree = "<group>"; };
+		423803311574340C00A4BC5C /* BSAppDelegate.h */ = {isa = PBXFileReference; path = BSAppDelegate.h; sourceTree = "<group>"; };
+		423803321574340C00A4BC5C /* BSAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BSAppDelegate.m; sourceTree = "<group>"; };
+		423803351574340C00A4BC5C /* BulkScan.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = BulkScan.xcdatamodel; sourceTree = "<group>"; };
+		423803371574340C00A4BC5C /* BSMasterViewController.h */ = {isa = PBXFileReference; path = BSMasterViewController.h; sourceTree = "<group>"; };
+		423803381574340C00A4BC5C /* BSMasterViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BSMasterViewController.m; sourceTree = "<group>"; };
+		4238033A1574340C00A4BC5C /* BSDetailViewController.h */ = {isa = PBXFileReference; path = BSDetailViewController.h; sourceTree = "<group>"; };
+		4238033B1574340C00A4BC5C /* BSDetailViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BSDetailViewController.m; sourceTree = "<group>"; };
+		4238033E1574340C00A4BC5C /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/BSMasterViewController.xib; sourceTree = "<group>"; };
+		423803411574340C00A4BC5C /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/BSDetailViewController.xib; sourceTree = "<group>"; };
+		423803481574340C00A4BC5C /* BulkScanTests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BulkScanTests.octest; sourceTree = BUILT_PRODUCTS_DIR; };
+		423803491574340C00A4BC5C /* SenTestingKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SenTestingKit.framework; path = Library/Frameworks/SenTestingKit.framework; sourceTree = DEVELOPER_DIR; };
+		423803521574340C00A4BC5C /* BulkScanTests-Info.plist */ = {isa = PBXFileReference; path = "BulkScanTests-Info.plist"; sourceTree = "<group>"; };
+		423803541574340C00A4BC5C /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		423803561574340C00A4BC5C /* BulkScanTests.h */ = {isa = PBXFileReference; path = BulkScanTests.h; sourceTree = "<group>"; };
+		423803571574340C00A4BC5C /* BulkScanTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BulkScanTests.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		423803191574340C00A4BC5C /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				423803211574340C00A4BC5C /* UIKit.framework in Frameworks */,
+				423803231574340C00A4BC5C /* Foundation.framework in Frameworks */,
+				423803251574340C00A4BC5C /* CoreGraphics.framework in Frameworks */,
+				423803271574340C00A4BC5C /* CoreData.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		423803441574340C00A4BC5C /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4238034A1574340C00A4BC5C /* SenTestingKit.framework in Frameworks */,
+				4238034B1574340C00A4BC5C /* UIKit.framework in Frameworks */,
+				4238034C1574340C00A4BC5C /* Foundation.framework in Frameworks */,
+				4238034D1574340C00A4BC5C /* CoreData.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		423803111574340C00A4BC5C = {
+			isa = PBXGroup;
+			children = (
+				423803281574340C00A4BC5C /* BulkScan */,
+				423803501574340C00A4BC5C /* BulkScanTests */,
+				4238031F1574340C00A4BC5C /* Frameworks */,
+				4238031D1574340C00A4BC5C /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		4238031D1574340C00A4BC5C /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				4238031C1574340C00A4BC5C /* BulkScan.app */,
+				423803481574340C00A4BC5C /* BulkScanTests.octest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		4238031F1574340C00A4BC5C /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				423803201574340C00A4BC5C /* UIKit.framework */,
+				423803221574340C00A4BC5C /* Foundation.framework */,
+				423803241574340C00A4BC5C /* CoreGraphics.framework */,
+				423803261574340C00A4BC5C /* CoreData.framework */,
+				423803491574340C00A4BC5C /* SenTestingKit.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		423803281574340C00A4BC5C /* BulkScan */ = {
+			isa = PBXGroup;
+			children = (
+				423803311574340C00A4BC5C /* BSAppDelegate.h */,
+				423803321574340C00A4BC5C /* BSAppDelegate.m */,
+				423803371574340C00A4BC5C /* BSMasterViewController.h */,
+				423803381574340C00A4BC5C /* BSMasterViewController.m */,
+				4238033A1574340C00A4BC5C /* BSDetailViewController.h */,
+				4238033B1574340C00A4BC5C /* BSDetailViewController.m */,
+				4238033D1574340C00A4BC5C /* BSMasterViewController.xib */,
+				423803401574340C00A4BC5C /* BSDetailViewController.xib */,
+				423803341574340C00A4BC5C /* BulkScan.xcdatamodeld */,
+				423803291574340C00A4BC5C /* Supporting Files */,
+			);
+			path = BulkScan;
+			sourceTree = "<group>";
+		};
+		423803291574340C00A4BC5C /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				4238032A1574340C00A4BC5C /* BulkScan-Info.plist */,
+				4238032B1574340C00A4BC5C /* InfoPlist.strings */,
+				4238032E1574340C00A4BC5C /* main.m */,
+				423803301574340C00A4BC5C /* BulkScan-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		423803501574340C00A4BC5C /* BulkScanTests */ = {
+			isa = PBXGroup;
+			children = (
+				423803561574340C00A4BC5C /* BulkScanTests.h */,
+				423803571574340C00A4BC5C /* BulkScanTests.m */,
+				423803511574340C00A4BC5C /* Supporting Files */,
+			);
+			path = BulkScanTests;
+			sourceTree = "<group>";
+		};
+		423803511574340C00A4BC5C /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				423803521574340C00A4BC5C /* BulkScanTests-Info.plist */,
+				423803531574340C00A4BC5C /* InfoPlist.strings */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		4238031B1574340C00A4BC5C /* BulkScan */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 4238035B1574340C00A4BC5C /* Build configuration list for PBXNativeTarget "BulkScan" */;
+			buildPhases = (
+				423803181574340C00A4BC5C /* Sources */,
+				423803191574340C00A4BC5C /* Frameworks */,
+				4238031A1574340C00A4BC5C /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = BulkScan;
+			productName = BulkScan;
+			productReference = 4238031C1574340C00A4BC5C /* BulkScan.app */;
+			productType = "com.apple.product-type.application";
+		};
+		423803471574340C00A4BC5C /* BulkScanTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 4238035E1574340C00A4BC5C /* Build configuration list for PBXNativeTarget "BulkScanTests" */;
+			buildPhases = (
+				423803431574340C00A4BC5C /* Sources */,
+				423803441574340C00A4BC5C /* Frameworks */,
+				423803451574340C00A4BC5C /* Resources */,
+				423803461574340C00A4BC5C /* ShellScript */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				4238034F1574340C00A4BC5C /* PBXTargetDependency */,
+			);
+			name = BulkScanTests;
+			productName = BulkScanTests;
+			productReference = 423803481574340C00A4BC5C /* BulkScanTests.octest */;
+			productType = "com.apple.product-type.bundle";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		423803131574340C00A4BC5C /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				CLASSPREFIX = BS;
+				LastUpgradeCheck = 0430;
+				ORGANIZATIONNAME = "Gargoyle Software";
+			};
+			buildConfigurationList = 423803161574340C00A4BC5C /* Build configuration list for PBXProject "BulkScan" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 423803111574340C00A4BC5C;
+			productRefGroup = 4238031D1574340C00A4BC5C /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				4238031B1574340C00A4BC5C /* BulkScan */,
+				423803471574340C00A4BC5C /* BulkScanTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		4238031A1574340C00A4BC5C /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4238032D1574340C00A4BC5C /* InfoPlist.strings in Resources */,
+				4238033F1574340C00A4BC5C /* BSMasterViewController.xib in Resources */,
+				423803421574340C00A4BC5C /* BSDetailViewController.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		423803451574340C00A4BC5C /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				423803551574340C00A4BC5C /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		423803461574340C00A4BC5C /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# Run the unit tests in this test bundle.\n\"${SYSTEM_DEVELOPER_DIR}/Tools/RunUnitTests\"\n";
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		423803181574340C00A4BC5C /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4238032F1574340C00A4BC5C /* main.m in Sources */,
+				423803331574340C00A4BC5C /* BSAppDelegate.m in Sources */,
+				423803361574340C00A4BC5C /* BulkScan.xcdatamodeld in Sources */,
+				423803391574340C00A4BC5C /* BSMasterViewController.m in Sources */,
+				4238033C1574340C00A4BC5C /* BSDetailViewController.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		423803431574340C00A4BC5C /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				423803581574340C00A4BC5C /* BulkScanTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		4238034F1574340C00A4BC5C /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 4238031B1574340C00A4BC5C /* BulkScan */;
+			targetProxy = 4238034E1574340C00A4BC5C /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		4238032B1574340C00A4BC5C /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				4238032C1574340C00A4BC5C /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		4238033D1574340C00A4BC5C /* BSMasterViewController.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				4238033E1574340C00A4BC5C /* en */,
+			);
+			name = BSMasterViewController.xib;
+			sourceTree = "<group>";
+		};
+		423803401574340C00A4BC5C /* BSDetailViewController.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				423803411574340C00A4BC5C /* en */,
+			);
+			name = BSDetailViewController.xib;
+			sourceTree = "<group>";
+		};
+		423803531574340C00A4BC5C /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				423803541574340C00A4BC5C /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		423803591574340C00A4BC5C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.1;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		4238035A1574340C00A4BC5C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.1;
+				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		4238035C1574340C00A4BC5C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "BulkScan/BulkScan-Prefix.pch";
+				INFOPLIST_FILE = "BulkScan/BulkScan-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		4238035D1574340C00A4BC5C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "BulkScan/BulkScan-Prefix.pch";
+				INFOPLIST_FILE = "BulkScan/BulkScan-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+		4238035F1574340C00A4BC5C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/BulkScan.app/BulkScan";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(DEVELOPER_LIBRARY_DIR)/Frameworks",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "BulkScan/BulkScan-Prefix.pch";
+				INFOPLIST_FILE = "BulkScanTests/BulkScanTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = octest;
+			};
+			name = Debug;
+		};
+		423803601574340C00A4BC5C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/BulkScan.app/BulkScan";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(DEVELOPER_LIBRARY_DIR)/Frameworks",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "BulkScan/BulkScan-Prefix.pch";
+				INFOPLIST_FILE = "BulkScanTests/BulkScanTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = octest;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		423803161574340C00A4BC5C /* Build configuration list for PBXProject "BulkScan" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				423803591574340C00A4BC5C /* Debug */,
+				4238035A1574340C00A4BC5C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		4238035B1574340C00A4BC5C /* Build configuration list for PBXNativeTarget "BulkScan" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				4238035C1574340C00A4BC5C /* Debug */,
+				4238035D1574340C00A4BC5C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		4238035E1574340C00A4BC5C /* Build configuration list for PBXNativeTarget "BulkScanTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				4238035F1574340C00A4BC5C /* Debug */,
+				423803601574340C00A4BC5C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		423803341574340C00A4BC5C /* BulkScan.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				423803351574340C00A4BC5C /* BulkScan.xcdatamodel */,
+			);
+			currentVersion = 423803351574340C00A4BC5C /* BulkScan.xcdatamodel */;
+			path = BulkScan.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = 423803131574340C00A4BC5C /* Project object */;
+}
