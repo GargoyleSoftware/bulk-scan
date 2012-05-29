@@ -37,6 +37,8 @@
 		423803AE157463DE00A4BC5C /* CHCSVWriter.m in Sources */ = {isa = PBXBuildFile; fileRef = 42380399157463DD00A4BC5C /* CHCSVWriter.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		423803C3157464A500A4BC5C /* CSVHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 423803C2157464A500A4BC5C /* CSVHelper.m */; };
 		423803C51574681A00A4BC5C /* MessageUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 423803C41574681A00A4BC5C /* MessageUI.framework */; };
+		423803C715746E8500A4BC5C /* Icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 423803C615746E8500A4BC5C /* Icon.png */; };
+		423803CA15746F3C00A4BC5C /* Entitlements.plist in Resources */ = {isa = PBXBuildFile; fileRef = 423803C915746F3C00A4BC5C /* Entitlements.plist */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -125,6 +127,8 @@
 		423803C1157464A500A4BC5C /* CSVHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CSVHelper.h; sourceTree = "<group>"; };
 		423803C2157464A500A4BC5C /* CSVHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CSVHelper.m; sourceTree = "<group>"; };
 		423803C41574681A00A4BC5C /* MessageUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MessageUI.framework; path = System/Library/Frameworks/MessageUI.framework; sourceTree = SDKROOT; };
+		423803C615746E8500A4BC5C /* Icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Icon.png; sourceTree = "<group>"; };
+		423803C915746F3C00A4BC5C /* Entitlements.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Entitlements.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -163,6 +167,7 @@
 		423803111574340C00A4BC5C = {
 			isa = PBXGroup;
 			children = (
+				423803C815746E8C00A4BC5C /* Resources */,
 				423803291574340C00A4BC5C /* Supporting Files */,
 				423803641574585000A4BC5C /* Libraries */,
 				423803281574340C00A4BC5C /* Classes */,
@@ -352,6 +357,15 @@
 			name = Helpers;
 			sourceTree = "<group>";
 		};
+		423803C815746E8C00A4BC5C /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				423803C915746F3C00A4BC5C /* Entitlements.plist */,
+				423803C615746E8500A4BC5C /* Icon.png */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -451,6 +465,8 @@
 				4238033F1574340C00A4BC5C /* BSMasterViewController.xib in Resources */,
 				423803421574340C00A4BC5C /* BSDetailViewController.xib in Resources */,
 				4238037F1574598200A4BC5C /* BSEditViewController.xib in Resources */,
+				423803C715746E8500A4BC5C /* Icon.png in Resources */,
+				423803CA15746F3C00A4BC5C /* Entitlements.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
