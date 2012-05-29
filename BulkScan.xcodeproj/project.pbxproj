@@ -34,6 +34,9 @@
 		4238038915745FCA00A4BC5C /* CoreVideo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4238038815745FCA00A4BC5C /* CoreVideo.framework */; };
 		4238038B15745FCE00A4BC5C /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4238038A15745FCE00A4BC5C /* QuartzCore.framework */; };
 		4238038D15745FD300A4BC5C /* libiconv.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 4238038C15745FD300A4BC5C /* libiconv.dylib */; };
+		423803AE157463DE00A4BC5C /* CHCSVWriter.m in Sources */ = {isa = PBXBuildFile; fileRef = 42380399157463DD00A4BC5C /* CHCSVWriter.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		423803C3157464A500A4BC5C /* CSVHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 423803C2157464A500A4BC5C /* CSVHelper.m */; };
+		423803C51574681A00A4BC5C /* MessageUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 423803C41574681A00A4BC5C /* MessageUI.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -43,6 +46,20 @@
 			proxyType = 1;
 			remoteGlobalIDString = 4238031B1574340C00A4BC5C;
 			remoteInfo = BulkScan;
+		};
+		423803BB157463DE00A4BC5C /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 42380394157463DD00A4BC5C /* CHCSVParser.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 8DD76FA10486AA7600D96B5E;
+			remoteInfo = CHCSVParser;
+		};
+		423803BD157463DE00A4BC5C /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 42380394157463DD00A4BC5C /* CHCSVParser.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 557FD0531204A70D009FCDBA;
+			remoteInfo = "Unit Tests";
 		};
 /* End PBXContainerItemProxy section */
 
@@ -102,6 +119,12 @@
 		4238038815745FCA00A4BC5C /* CoreVideo.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreVideo.framework; path = System/Library/Frameworks/CoreVideo.framework; sourceTree = SDKROOT; };
 		4238038A15745FCE00A4BC5C /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		4238038C15745FD300A4BC5C /* libiconv.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libiconv.dylib; path = usr/lib/libiconv.dylib; sourceTree = SDKROOT; };
+		42380394157463DD00A4BC5C /* CHCSVParser.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; path = CHCSVParser.xcodeproj; sourceTree = "<group>"; };
+		42380398157463DD00A4BC5C /* CHCSVWriter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CHCSVWriter.h; sourceTree = "<group>"; };
+		42380399157463DD00A4BC5C /* CHCSVWriter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CHCSVWriter.m; sourceTree = "<group>"; };
+		423803C1157464A500A4BC5C /* CSVHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CSVHelper.h; sourceTree = "<group>"; };
+		423803C2157464A500A4BC5C /* CSVHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CSVHelper.m; sourceTree = "<group>"; };
+		423803C41574681A00A4BC5C /* MessageUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MessageUI.framework; path = System/Library/Frameworks/MessageUI.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -109,6 +132,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				423803C51574681A00A4BC5C /* MessageUI.framework in Frameworks */,
 				4238038D15745FD300A4BC5C /* libiconv.dylib in Frameworks */,
 				4238038B15745FCE00A4BC5C /* QuartzCore.framework in Frameworks */,
 				4238038915745FCA00A4BC5C /* CoreVideo.framework in Frameworks */,
@@ -161,6 +185,7 @@
 			isa = PBXGroup;
 			children = (
 				4238038C15745FD300A4BC5C /* libiconv.dylib */,
+				423803C41574681A00A4BC5C /* MessageUI.framework */,
 				4238038A15745FCE00A4BC5C /* QuartzCore.framework */,
 				4238038815745FCA00A4BC5C /* CoreVideo.framework */,
 				4238038615745FC500A4BC5C /* CoreMedia.framework */,
@@ -177,18 +202,11 @@
 		423803281574340C00A4BC5C /* Classes */ = {
 			isa = PBXGroup;
 			children = (
+				423803C01574649900A4BC5C /* Helpers */,
+				423803BF1574648F00A4BC5C /* ViewControllers */,
 				4238038015745BD100A4BC5C /* Model */,
 				423803311574340C00A4BC5C /* BSAppDelegate.h */,
 				423803321574340C00A4BC5C /* BSAppDelegate.m */,
-				423803371574340C00A4BC5C /* BSMasterViewController.h */,
-				423803381574340C00A4BC5C /* BSMasterViewController.m */,
-				4238033A1574340C00A4BC5C /* BSDetailViewController.h */,
-				4238033B1574340C00A4BC5C /* BSDetailViewController.m */,
-				4238033D1574340C00A4BC5C /* BSMasterViewController.xib */,
-				423803401574340C00A4BC5C /* BSDetailViewController.xib */,
-				4238037B1574598200A4BC5C /* BSEditViewController.h */,
-				4238037C1574598200A4BC5C /* BSEditViewController.m */,
-				4238037D1574598200A4BC5C /* BSEditViewController.xib */,
 			);
 			name = Classes;
 			path = BulkScan;
@@ -237,6 +255,7 @@
 		423803641574585000A4BC5C /* Libraries */ = {
 			isa = PBXGroup;
 			children = (
+				4238038E157463DD00A4BC5C /* CHCSVParser */,
 				423803631574584C00A4BC5C /* ZBar */,
 			);
 			name = Libraries;
@@ -286,6 +305,51 @@
 				423803341574340C00A4BC5C /* BulkScan.xcdatamodeld */,
 			);
 			name = Model;
+			sourceTree = "<group>";
+		};
+		4238038E157463DD00A4BC5C /* CHCSVParser */ = {
+			isa = PBXGroup;
+			children = (
+				42380394157463DD00A4BC5C /* CHCSVParser.xcodeproj */,
+				42380398157463DD00A4BC5C /* CHCSVWriter.h */,
+				42380399157463DD00A4BC5C /* CHCSVWriter.m */,
+			);
+			name = CHCSVParser;
+			path = Libraries/CHCSVParser;
+			sourceTree = "<group>";
+		};
+		42380395157463DD00A4BC5C /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				423803BC157463DE00A4BC5C /* CHCSVParser */,
+				423803BE157463DE00A4BC5C /* Unit Tests.octest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		423803BF1574648F00A4BC5C /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				423803371574340C00A4BC5C /* BSMasterViewController.h */,
+				423803381574340C00A4BC5C /* BSMasterViewController.m */,
+				4238033A1574340C00A4BC5C /* BSDetailViewController.h */,
+				4238033B1574340C00A4BC5C /* BSDetailViewController.m */,
+				4238033D1574340C00A4BC5C /* BSMasterViewController.xib */,
+				423803401574340C00A4BC5C /* BSDetailViewController.xib */,
+				4238037B1574598200A4BC5C /* BSEditViewController.h */,
+				4238037C1574598200A4BC5C /* BSEditViewController.m */,
+				4238037D1574598200A4BC5C /* BSEditViewController.xib */,
+			);
+			name = ViewControllers;
+			sourceTree = "<group>";
+		};
+		423803C01574649900A4BC5C /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				423803C1157464A500A4BC5C /* CSVHelper.h */,
+				423803C2157464A500A4BC5C /* CSVHelper.m */,
+			);
+			name = Helpers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -347,6 +411,12 @@
 			mainGroup = 423803111574340C00A4BC5C;
 			productRefGroup = 4238031D1574340C00A4BC5C /* Products */;
 			projectDirPath = "";
+			projectReferences = (
+				{
+					ProductGroup = 42380395157463DD00A4BC5C /* Products */;
+					ProjectRef = 42380394157463DD00A4BC5C /* CHCSVParser.xcodeproj */;
+				},
+			);
 			projectRoot = "";
 			targets = (
 				4238031B1574340C00A4BC5C /* BulkScan */,
@@ -354,6 +424,23 @@
 			);
 		};
 /* End PBXProject section */
+
+/* Begin PBXReferenceProxy section */
+		423803BC157463DE00A4BC5C /* CHCSVParser */ = {
+			isa = PBXReferenceProxy;
+			fileType = "compiled.mach-o.executable";
+			path = CHCSVParser;
+			remoteRef = 423803BB157463DE00A4BC5C /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		423803BE157463DE00A4BC5C /* Unit Tests.octest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = "Unit Tests.octest";
+			remoteRef = 423803BD157463DE00A4BC5C /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+/* End PBXReferenceProxy section */
 
 /* Begin PBXResourcesBuildPhase section */
 		4238031A1574340C00A4BC5C /* Resources */ = {
@@ -405,6 +492,8 @@
 				4238033C1574340C00A4BC5C /* BSDetailViewController.m in Sources */,
 				4238037E1574598200A4BC5C /* BSEditViewController.m in Sources */,
 				4238038315745BDA00A4BC5C /* ScanRecord.m in Sources */,
+				423803AE157463DE00A4BC5C /* CHCSVWriter.m in Sources */,
+				423803C3157464A500A4BC5C /* CSVHelper.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

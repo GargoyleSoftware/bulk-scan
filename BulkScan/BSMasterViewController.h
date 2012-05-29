@@ -7,12 +7,13 @@
 //
 
 #import <UIKit/UIKit.h>
+#import <CoreData/CoreData.h>
+#import <MessageUI/MessageUI.h>
 
 @class BSDetailViewController;
 
-#import <CoreData/CoreData.h>
 
-@interface BSMasterViewController : UITableViewController <NSFetchedResultsControllerDelegate>
+@interface BSMasterViewController : UITableViewController <NSFetchedResultsControllerDelegate, MFMailComposeViewControllerDelegate>
 
 @property (strong, nonatomic) BSDetailViewController *detailViewController;
 

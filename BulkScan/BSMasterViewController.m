@@ -6,8 +6,10 @@
 //  Copyright (c) 2012 Gargoyle Software. All rights reserved.
 //
 
+
 #import "BSMasterViewController.h"
 
+#import "CSVHelper.h"
 #import "BSDetailViewController.h"
 #import "BSEditViewController.h"
 
@@ -40,7 +42,11 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
     //
-    self.navigationItem.leftBarButtonItem = self.editButtonItem;
+    
+    //self.navigationItem.leftBarButtonItem = self.editButtonItem;
+
+    UIBarButtonItem *emailButton = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemCompose target:self action:@selector(emailButtonWasPressed:)];
+    self.navigationItem.leftBarButtonItem = emailButton;
 
     UIBarButtonItem *addButton = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemAdd target:self action:@selector(addButtonWasPressed:)];
     self.navigationItem.rightBarButtonItem = addButton;
@@ -95,7 +101,30 @@
                                        animated: YES];
 }
 
+- (void)sendDataAsCSV
+{
+  MFMailComposeViewController *vc = [[MFMailComposeViewController alloc] init];
+  vc.mailComposeDelegate = self;
+
+  [vc setSubject:@"My Barcodes"];
+
+  CSVHelper *csvHelper = [[CSVHelper alloc] init];
+  
+  NSString *csvString = [csvHelper convertAllScansToCSV];
+  NSData *csvData = [csvString dataUsingEncoding: NSUTF8StringEncoding
+                            allowLossyConversion: NO];
+  [vc addAttachmentData: csvData 
+               mimeType: @"Content-type: text/csv" 
+               fileName: @"Barcodes.csv"];
+
+  [self presentModalViewController: vc animated: YES];
+}
+
 #pragma mark - UI Callbacks
+
+- (void)emailButtonWasPressed:(id)sender {
+  [self sendDataAsCSV];
+}
 
 - (void)addButtonWasPressed:(id)sender {
     //[self insertNewObject: sender];
@@ -118,16 +147,16 @@
 // Customize the appearance of table view cells.
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    static NSString *CellIdentifier = @"Cell";
+  static NSString *CellIdentifier = @"Cell";
 
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
-    if (cell == nil) {
-        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:CellIdentifier];
-        cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
-    }
+  UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
+  if (cell == nil) {
+    cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:CellIdentifier];
+    cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
+  }
 
   [self configureCell:cell atIndexPath:indexPath];
-    return cell;
+  return cell;
 }
 
 #pragma mark - UITableViewDelegate
@@ -291,6 +320,13 @@
     } else {
         cell.textLabel.text = [[object valueForKey:@"barcodeValue"] description];
     }
+}
+
+
+#pragma mark - MFMessageComposeViewController Delegate
+- (void)mailComposeController:(MFMailComposeViewController *)controller didFinishWithResult:(MFMailComposeResult)result error:(NSError *)error 
+{
+  [self dismissModalViewControllerAnimated: YES];
 }
 
 @end
