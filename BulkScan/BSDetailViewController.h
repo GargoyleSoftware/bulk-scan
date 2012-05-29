@@ -14,4 +14,8 @@
 
 @property (strong, nonatomic) IBOutlet UILabel *detailDescriptionLabel;
 
+@property (strong, nonatomic) IBOutlet UILabel *barcodeLabel;
+@property (strong, nonatomic) IBOutlet UILabel *typeLabel;
+@property (strong, nonatomic) IBOutlet UILabel *memoLabel;
+
 @end

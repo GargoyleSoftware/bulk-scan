@@ -3,9 +3,10 @@
     <entity name="ScanRecord" syncable="YES">
         <attribute name="barcodeType" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="barcodeValue" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="memo" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="timeStamp" optional="YES" attributeType="Date"/>
     </entity>
     <elements>
-        <element name="ScanRecord" positionX="160" positionY="192" width="128" height="90"/>
+        <element name="ScanRecord" positionX="160" positionY="192" width="128" height="105"/>
     </elements>
 </model>

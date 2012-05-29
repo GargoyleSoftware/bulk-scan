@@ -17,6 +17,10 @@
 @synthesize detailItem = _detailItem;
 @synthesize detailDescriptionLabel = _detailDescriptionLabel;
 
+@synthesize barcodeLabel = _barcodeLabel;
+@synthesize typeLabel = _typeLabel;
+@synthesize memoLabel = _memoLabel;
+
 #pragma mark - Managing the detail item
 
 - (void)setDetailItem:(id)newDetailItem
@@ -35,6 +39,12 @@
 
   if (self.detailItem) {
       self.detailDescriptionLabel.text = [[self.detailItem valueForKey:@"timeStamp"] description];
+
+      self.barcodeLabel.text = [[self.detailItem valueForKey:@"barcodeValue"] description];
+      self.typeLabel.text    = [[self.detailItem valueForKey:@"barcodeType"] description];
+      self.memoLabel.text    = [[self.detailItem valueForKey:@"memo"] description];
+
+      
   }
 }
 
