@@ -9,6 +9,7 @@
 #import "BSMasterViewController.h"
 
 #import "BSDetailViewController.h"
+#import "BSEditViewController.h"
 
 @interface BSMasterViewController ()
 - (void)configureCell:(UITableViewCell *)cell atIndexPath:(NSIndexPath *)indexPath;
@@ -26,7 +27,8 @@
 {
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
     if (self) {
-    self.title = NSLocalizedString(@"Master", @"Master");
+    //self.title = NSLocalizedString(@"Master", @"Master");
+        self.title = @"Barcodes";
     }
     return self;
 }
@@ -42,6 +44,12 @@
 
     UIBarButtonItem *addButton = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemAdd target:self action:@selector(addButtonWasPressed:)];
     self.navigationItem.rightBarButtonItem = addButton;
+}
+
+- (void)viewWillAppear:(BOOL)animated {
+  [super viewWillAppear: animated];
+
+  [self.tableView reloadData];
 }
 
 - (void)viewDidUnload
@@ -81,11 +89,17 @@
     }
 }
 
+- (void)pushEditController {
+  BSEditViewController *evc = [[BSEditViewController alloc] initWithScanRecord: nil];
+  [self.navigationController pushViewController: evc
+                                       animated: YES];
+}
+
 #pragma mark - UI Callbacks
 
-- (void)addButtonWasPressed:(id)sender
-{
-    [self insertNewObject: sender];
+- (void)addButtonWasPressed:(id)sender {
+    //[self insertNewObject: sender];
+    [self pushEditController];
 }
 
 #pragma mark - UITableViewDataSource
@@ -148,12 +162,21 @@
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
+#if 0
     if (!self.detailViewController) {
         self.detailViewController = [[BSDetailViewController alloc] initWithNibName:@"BSDetailViewController" bundle:nil];
     }
+
     NSManagedObject *object = [[self fetchedResultsController] objectAtIndexPath:indexPath];
     self.detailViewController.detailItem = object;
     [self.navigationController pushViewController:self.detailViewController animated:YES];
+#else
+    ScanRecord *object = [[self fetchedResultsController] objectAtIndexPath:indexPath];
+    BSEditViewController *evc = [[BSEditViewController alloc] initWithScanRecord: object];
+    [self.navigationController pushViewController: evc
+                                         animated: YES];
+#endif
+
 }
 
 #pragma mark - Fetched results controller
@@ -261,7 +284,13 @@
 - (void)configureCell:(UITableViewCell *)cell atIndexPath:(NSIndexPath *)indexPath
 {
     NSManagedObject *object = [self.fetchedResultsController objectAtIndexPath:indexPath];
-    cell.textLabel.text = [[object valueForKey:@"timeStamp"] description];
+    //cell.textLabel.text = [[object valueForKey:@"timeStamp"] description];
+    NSString *memo = [[object valueForKey:@"memo"] description];
+    if (memo) {
+        cell.textLabel.text = memo;
+    } else {
+        cell.textLabel.text = [[object valueForKey:@"barcodeValue"] description];
+    }
 }
 
 @end

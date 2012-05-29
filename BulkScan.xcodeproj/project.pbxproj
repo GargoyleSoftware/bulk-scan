@@ -26,6 +26,14 @@
 		423803551574340C00A4BC5C /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 423803531574340C00A4BC5C /* InfoPlist.strings */; };
 		423803581574340C00A4BC5C /* BulkScanTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 423803571574340C00A4BC5C /* BulkScanTests.m */; };
 		423803621574584A00A4BC5C /* libzbar.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 423803611574584A00A4BC5C /* libzbar.a */; };
+		4238037E1574598200A4BC5C /* BSEditViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4238037C1574598200A4BC5C /* BSEditViewController.m */; };
+		4238037F1574598200A4BC5C /* BSEditViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4238037D1574598200A4BC5C /* BSEditViewController.xib */; };
+		4238038315745BDA00A4BC5C /* ScanRecord.m in Sources */ = {isa = PBXBuildFile; fileRef = 4238038215745BDA00A4BC5C /* ScanRecord.m */; };
+		4238038515745FC000A4BC5C /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4238038415745FC000A4BC5C /* AVFoundation.framework */; };
+		4238038715745FC500A4BC5C /* CoreMedia.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4238038615745FC500A4BC5C /* CoreMedia.framework */; };
+		4238038915745FCA00A4BC5C /* CoreVideo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4238038815745FCA00A4BC5C /* CoreVideo.framework */; };
+		4238038B15745FCE00A4BC5C /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4238038A15745FCE00A4BC5C /* QuartzCore.framework */; };
+		4238038D15745FD300A4BC5C /* libiconv.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 4238038C15745FD300A4BC5C /* libiconv.dylib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -84,6 +92,16 @@
 		423803781574585B00A4BC5C /* ZBarReaderViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZBarReaderViewController.h; sourceTree = "<group>"; };
 		423803791574585B00A4BC5C /* ZBarSDK.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZBarSDK.h; sourceTree = "<group>"; };
 		4238037A1574585B00A4BC5C /* ZBarSymbol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZBarSymbol.h; sourceTree = "<group>"; };
+		4238037B1574598200A4BC5C /* BSEditViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BSEditViewController.h; sourceTree = "<group>"; };
+		4238037C1574598200A4BC5C /* BSEditViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BSEditViewController.m; sourceTree = "<group>"; };
+		4238037D1574598200A4BC5C /* BSEditViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BSEditViewController.xib; sourceTree = "<group>"; };
+		4238038115745BDA00A4BC5C /* ScanRecord.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ScanRecord.h; sourceTree = "<group>"; };
+		4238038215745BDA00A4BC5C /* ScanRecord.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ScanRecord.m; sourceTree = "<group>"; };
+		4238038415745FC000A4BC5C /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
+		4238038615745FC500A4BC5C /* CoreMedia.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreMedia.framework; path = System/Library/Frameworks/CoreMedia.framework; sourceTree = SDKROOT; };
+		4238038815745FCA00A4BC5C /* CoreVideo.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreVideo.framework; path = System/Library/Frameworks/CoreVideo.framework; sourceTree = SDKROOT; };
+		4238038A15745FCE00A4BC5C /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+		4238038C15745FD300A4BC5C /* libiconv.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libiconv.dylib; path = usr/lib/libiconv.dylib; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -91,6 +109,11 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4238038D15745FD300A4BC5C /* libiconv.dylib in Frameworks */,
+				4238038B15745FCE00A4BC5C /* QuartzCore.framework in Frameworks */,
+				4238038915745FCA00A4BC5C /* CoreVideo.framework in Frameworks */,
+				4238038715745FC500A4BC5C /* CoreMedia.framework in Frameworks */,
+				4238038515745FC000A4BC5C /* AVFoundation.framework in Frameworks */,
 				423803211574340C00A4BC5C /* UIKit.framework in Frameworks */,
 				423803231574340C00A4BC5C /* Foundation.framework in Frameworks */,
 				423803251574340C00A4BC5C /* CoreGraphics.framework in Frameworks */,
@@ -116,8 +139,9 @@
 		423803111574340C00A4BC5C = {
 			isa = PBXGroup;
 			children = (
+				423803291574340C00A4BC5C /* Supporting Files */,
 				423803641574585000A4BC5C /* Libraries */,
-				423803281574340C00A4BC5C /* BulkScan */,
+				423803281574340C00A4BC5C /* Classes */,
 				423803501574340C00A4BC5C /* BulkScanTests */,
 				4238031F1574340C00A4BC5C /* Frameworks */,
 				4238031D1574340C00A4BC5C /* Products */,
@@ -136,6 +160,11 @@
 		4238031F1574340C00A4BC5C /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				4238038C15745FD300A4BC5C /* libiconv.dylib */,
+				4238038A15745FCE00A4BC5C /* QuartzCore.framework */,
+				4238038815745FCA00A4BC5C /* CoreVideo.framework */,
+				4238038615745FC500A4BC5C /* CoreMedia.framework */,
+				4238038415745FC000A4BC5C /* AVFoundation.framework */,
 				423803201574340C00A4BC5C /* UIKit.framework */,
 				423803221574340C00A4BC5C /* Foundation.framework */,
 				423803241574340C00A4BC5C /* CoreGraphics.framework */,
@@ -145,9 +174,10 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		423803281574340C00A4BC5C /* BulkScan */ = {
+		423803281574340C00A4BC5C /* Classes */ = {
 			isa = PBXGroup;
 			children = (
+				4238038015745BD100A4BC5C /* Model */,
 				423803311574340C00A4BC5C /* BSAppDelegate.h */,
 				423803321574340C00A4BC5C /* BSAppDelegate.m */,
 				423803371574340C00A4BC5C /* BSMasterViewController.h */,
@@ -156,9 +186,11 @@
 				4238033B1574340C00A4BC5C /* BSDetailViewController.m */,
 				4238033D1574340C00A4BC5C /* BSMasterViewController.xib */,
 				423803401574340C00A4BC5C /* BSDetailViewController.xib */,
-				423803341574340C00A4BC5C /* BulkScan.xcdatamodeld */,
-				423803291574340C00A4BC5C /* Supporting Files */,
+				4238037B1574598200A4BC5C /* BSEditViewController.h */,
+				4238037C1574598200A4BC5C /* BSEditViewController.m */,
+				4238037D1574598200A4BC5C /* BSEditViewController.xib */,
 			);
+			name = Classes;
 			path = BulkScan;
 			sourceTree = "<group>";
 		};
@@ -171,6 +203,7 @@
 				423803301574340C00A4BC5C /* BulkScan-Prefix.pch */,
 			);
 			name = "Supporting Files";
+			path = BulkScan;
 			sourceTree = "<group>";
 		};
 		423803501574340C00A4BC5C /* BulkScanTests */ = {
@@ -243,6 +276,16 @@
 				4238036F1574585B00A4BC5C /* Window.h */,
 			);
 			path = zbar;
+			sourceTree = "<group>";
+		};
+		4238038015745BD100A4BC5C /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				4238038115745BDA00A4BC5C /* ScanRecord.h */,
+				4238038215745BDA00A4BC5C /* ScanRecord.m */,
+				423803341574340C00A4BC5C /* BulkScan.xcdatamodeld */,
+			);
+			name = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -320,6 +363,7 @@
 				4238032D1574340C00A4BC5C /* InfoPlist.strings in Resources */,
 				4238033F1574340C00A4BC5C /* BSMasterViewController.xib in Resources */,
 				423803421574340C00A4BC5C /* BSDetailViewController.xib in Resources */,
+				4238037F1574598200A4BC5C /* BSEditViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -359,6 +403,8 @@
 				423803361574340C00A4BC5C /* BulkScan.xcdatamodeld in Sources */,
 				423803391574340C00A4BC5C /* BSMasterViewController.m in Sources */,
 				4238033C1574340C00A4BC5C /* BSDetailViewController.m in Sources */,
+				4238037E1574598200A4BC5C /* BSEditViewController.m in Sources */,
+				4238038315745BDA00A4BC5C /* ScanRecord.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
