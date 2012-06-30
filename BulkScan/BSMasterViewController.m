@@ -9,12 +9,14 @@
 
 #import "BSMasterViewController.h"
 
+#import "AlertHelper.h"
 #import "CSVHelper.h"
 #import "BSDetailViewController.h"
 #import "BSEditViewController.h"
 
 @interface BSMasterViewController ()
 - (void)configureCell:(UITableViewCell *)cell atIndexPath:(NSIndexPath *)indexPath;
+- (BOOL)isEmpty;
 @end
 
 @implementation BSMasterViewController
@@ -27,12 +29,12 @@
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
-    self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
-    if (self) {
+  self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
+  if (self) {
     //self.title = NSLocalizedString(@"Master", @"Master");
-        self.title = @"Barcodes";
-    }
-    return self;
+    self.title = @"Barcodes";
+  }
+  return self;
 }
 
 #pragma mark - View Lifecycle
@@ -45,7 +47,10 @@
     
     //self.navigationItem.leftBarButtonItem = self.editButtonItem;
 
-    UIBarButtonItem *emailButton = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemCompose target:self action:@selector(emailButtonWasPressed:)];
+    //UIBarButtonItem *emailButton = [[UIBarButtonItem alloc] initWithBarButtonSystemItem: UIBarButtonSystemItemCompose 
+    UIBarButtonItem *emailButton = [[UIBarButtonItem alloc] initWithBarButtonSystemItem: UIBarButtonSystemItemAction
+                                                                                 target: self 
+                                                                                 action: @selector(emailButtonWasPressed:)];
     self.navigationItem.leftBarButtonItem = emailButton;
 
     UIBarButtonItem *addButton = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemAdd target:self action:@selector(addButtonWasPressed:)];
@@ -123,12 +128,21 @@
 #pragma mark - UI Callbacks
 
 - (void)emailButtonWasPressed:(id)sender {
-  [self sendDataAsCSV];
+  NSLog(@"emailButtonWasPressed");
+  if (![self isEmpty]) {
+    [self sendDataAsCSV];
+  } else {
+    // Show a warning
+    
+    [AlertHelper showAlertWithTitle: @"No Barcodes"
+                            message: @"Please scan barcodes before you email them."
+                           delegate: nil];
+  }
 }
 
 - (void)addButtonWasPressed:(id)sender {
-    //[self insertNewObject: sender];
-    [self pushEditController];
+  //[self insertNewObject: sender];
+  [self pushEditController];
 }
 
 #pragma mark - UITableViewDataSource
@@ -322,6 +336,17 @@
     }
 }
 
+- (BOOL)isEmpty
+{
+  id <NSFetchedResultsSectionInfo> section = [self.fetchedResultsController.sections objectAtIndex: 0];
+  NSInteger numObjects = section.numberOfObjects;
+  NSLog(@"numObjects: %d", numObjects);
+  if (numObjects > 0) {
+    return NO;
+  } else {
+    return YES;
+  }
+}
 
 #pragma mark - MFMessageComposeViewController Delegate
 - (void)mailComposeController:(MFMailComposeViewController *)controller didFinishWithResult:(MFMailComposeResult)result error:(NSError *)error 
