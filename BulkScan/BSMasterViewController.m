@@ -60,6 +60,11 @@
 - (void)viewWillAppear:(BOOL)animated {
   [super viewWillAppear: animated];
 
+}
+
+- (void)viewDidAppear:(BOOL)animated {
+  [super viewDidAppear: animated];
+
   [self.tableView reloadData];
 }
 
@@ -165,7 +170,8 @@
 
   UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
   if (cell == nil) {
-    cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:CellIdentifier];
+    //cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:CellIdentifier];
+    cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:CellIdentifier];
     cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
   }
 
@@ -329,10 +335,13 @@
     NSManagedObject *object = [self.fetchedResultsController objectAtIndexPath:indexPath];
     //cell.textLabel.text = [[object valueForKey:@"timeStamp"] description];
     NSString *memo = [[object valueForKey:@"memo"] description];
+
+    NSString *barcode = [[object valueForKey:@"barcodeValue"] description];
     if (memo) {
-        cell.textLabel.text = memo;
+      cell.textLabel.text = memo;
+      cell.detailTextLabel.text = barcode;
     } else {
-        cell.textLabel.text = [[object valueForKey:@"barcodeValue"] description];
+      cell.textLabel.text = barcode;
     }
 }
 

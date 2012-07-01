@@ -29,6 +29,7 @@
 
 - (id)initWithScanRecord:(ScanRecord *)scanRecord {
   if (self = [super init]) {
+    self.title = @"Edit Barcode";
     if (scanRecord) {
       self.scanRecord = scanRecord;
     } else {
