@@ -37,7 +37,6 @@
 
       NSManagedObject *newScanRecord = [NSEntityDescription insertNewObjectForEntityForName:@"ScanRecord" inManagedObjectContext:context];
 
-
       self.scanRecord = (ScanRecord *) newScanRecord;
       self.scanRecord.timeStamp = [NSDate date];
     }
@@ -52,6 +51,8 @@
   [super viewDidLoad];
 
   [self updateView: NO];
+
+  self.memoField.delegate = self;
 
   //UIBarButtonItem *doneButton = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemDone target:self action:@selector(doneButtonWasPressed:)];
   //self.navigationItem.rightBarButtonItem = doneButton;
@@ -170,6 +171,15 @@
     } else {
         NSLog(@"Error. barcode not captured.");
     }
+}
+
+#pragma mark - UITextFieldDelegate
+
+- (BOOL)textFieldShouldReturn:(UITextField *)textField 
+{
+  [textField resignFirstResponder];
+
+  return YES;
 }
 
 #pragma mark - Rotation
