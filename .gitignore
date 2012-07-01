@@ -12,3 +12,5 @@ build/
 *.perspectivev3
 
 Diagnostics/
+
+.idea/
