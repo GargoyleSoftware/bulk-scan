@@ -6,8 +6,8 @@
 //  Copyright (c) 2012 Gargoyle Software. All rights reserved.
 //
 
-#import <Foundation/Foundation.h>
 
-@interface Macros : NSObject
+#define IS_NULL(x) (x == nil || [(x) isKindOfClass:[NSNull class]])
+#define IS_NOT_NULL(x) (! IS_NULL(x))
 
-@end
+#define IS_VALID_STRING(x) (IS_NOT_NULL(x) && ![x isEqualToString: @""])

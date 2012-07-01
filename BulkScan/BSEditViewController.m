@@ -83,10 +83,21 @@
 }
 
 - (void)saveState {
-  self.scanRecord.memo = self.memoField.text;
+  if (
+      IS_VALID_STRING(self.memoField.text) || 
+      IS_VALID_STRING(self.barcodeLabel.text)
+  ) {
+    self.scanRecord.memo = self.memoField.text;
 
-  NSError *error = nil;
-  [self.context save: &error];
+    NSError *error = nil;
+    [self.context save: &error];
+  } else {
+    NSLog(@"not saving state because no barcode!");
+    BSAppDelegate *appDelegate = ((BSAppDelegate *) [UIApplication sharedApplication].delegate);
+    NSManagedObjectContext *context = appDelegate.managedObjectContext;
+    [context deleteObject: self.scanRecord];
+    self.scanRecord = nil;
+  }
 }
 
 - (void)saveAndPop {

@@ -129,6 +129,7 @@
 		423803C41574681A00A4BC5C /* MessageUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MessageUI.framework; path = System/Library/Frameworks/MessageUI.framework; sourceTree = SDKROOT; };
 		423803C615746E8500A4BC5C /* Icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Icon.png; sourceTree = "<group>"; };
 		423803CD1574706C00A4BC5C /* BulkScan.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.xml; name = BulkScan.entitlements; path = BulkScan/BulkScan.entitlements; sourceTree = "<group>"; };
+		4248A1A115A036D100F88460 /* Macros.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Macros.h; sourceTree = "<group>"; };
 		42567E92159FBEBA0056EE5B /* AlertHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AlertHelper.h; sourceTree = "<group>"; };
 		42567E93159FBEBA0056EE5B /* AlertHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AlertHelper.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -357,6 +358,7 @@
 				423803C2157464A500A4BC5C /* CSVHelper.m */,
 				42567E92159FBEBA0056EE5B /* AlertHelper.h */,
 				42567E93159FBEBA0056EE5B /* AlertHelper.m */,
+				4248A1A115A036D100F88460 /* Macros.h */,
 			);
 			name = Helpers;
 			sourceTree = "<group>";
