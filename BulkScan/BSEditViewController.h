@@ -11,7 +11,7 @@
 
 @class ScanRecord;
 
-@interface BSEditViewController : UIViewController <ZBarReaderDelegate, UITextFieldDelegate>
+@interface BSEditViewController : UIViewController <ZBarReaderDelegate, UITextFieldDelegate, UIActionSheetDelegate>
 
 @property (nonatomic, strong) ScanRecord *scanRecord;
 @property (nonatomic, strong) NSManagedObjectContext *context;

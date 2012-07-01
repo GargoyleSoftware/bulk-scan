@@ -122,7 +122,16 @@
 }
 
 - (IBAction)scanButtonWasPressed:(id)sender {
-  [self loadModalBarCodeScanner];
+
+  // open a dialog with two custom buttons
+  UIActionSheet *actionSheet = [[UIActionSheet alloc] initWithTitle: @"Select Scan Method"
+                                                           delegate: self
+                                                  cancelButtonTitle: @"Cancel"
+                                             destructiveButtonTitle: nil
+                                                  otherButtonTitles: @"Camera", @"From Gallery", nil];
+  actionSheet.actionSheetStyle = UIActionSheetStyleDefault;
+  //actionSheet.destructiveButtonIndex = 1;	// make the second button red (destructive)
+  [actionSheet showInView:self.view]; // show from our table view (pops up in the middle of the table)
 }
 
 #pragma mark - Barcode Reading
@@ -193,9 +202,24 @@
     }
 }
 
+#pragma mark - UIActionSheetDelegate
+
+- (void)actionSheet:(UIActionSheet *)actionSheet clickedButtonAtIndex:(NSInteger)buttonIndex
+{
+  // the user clicked one of the OK/Cancel buttons
+  if (buttonIndex == 0) {
+    //NSLog(@"ok");
+    [self loadModalBarCodeScanner];
+  } else if (buttonIndex == 1) {
+
+  } else {
+    //NSLog(@"cancel");
+  }
+}
+
 #pragma mark - UITextFieldDelegate
 
-- (BOOL)textFieldShouldReturn:(UITextField *)textField 
+- (BOOL)textFieldShouldReturn:(UITextField *)textField
 {
   [textField resignFirstResponder];
 
