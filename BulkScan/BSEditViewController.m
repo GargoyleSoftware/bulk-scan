@@ -61,7 +61,7 @@
 - (void)viewWillDisappear:(BOOL)animated
 {
   [self saveState];
-  
+
   [super viewWillDisappear: animated];
 }
 
@@ -84,15 +84,24 @@
 
 - (void)saveState {
   if (
-      IS_VALID_STRING(self.memoField.text) || 
+      IS_VALID_STRING(self.memoField.text) ||
       IS_VALID_STRING(self.barcodeLabel.text)
   ) {
-    self.scanRecord.memo = self.memoField.text;
-
-    NSError *error = nil;
-    [self.context save: &error];
+    [self saveScanRecord];
   } else {
     NSLog(@"not saving state because no barcode!");
+    [self deleteScanRecord];
+  }
+}
+
+- (void)saveScanRecord {
+  self.scanRecord.memo = self.memoField.text;
+  NSError *error = nil;
+  [self.context save: &error];
+}
+
+- (void)deleteScanRecord {
+  if (self.scanRecord) {
     BSAppDelegate *appDelegate = ((BSAppDelegate *) [UIApplication sharedApplication].delegate);
     NSManagedObjectContext *context = appDelegate.managedObjectContext;
     [context deleteObject: self.scanRecord];
